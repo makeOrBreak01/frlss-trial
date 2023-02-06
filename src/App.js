@@ -1,12 +1,10 @@
 import './App.css';
-import { Button } from './components/button';
-import { Counter } from './components/counter';
+import {Count} from './components/count'
 
 function App() {
   return (
     <div className="App">
-      <Button />
-      <Counter />
+      <Count />
     </div>
   );
 }
