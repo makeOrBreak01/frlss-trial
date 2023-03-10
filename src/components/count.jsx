@@ -6,8 +6,6 @@ import { Counter } from './counter';
 const countKey = '1ccb732e-b55a-4404-ad3f-0f99c02fe44e';
 
 
-
-
 export const Count = (props) => {
 
   const [countNumb, setCountNumb] = useState();
@@ -30,14 +28,20 @@ export const Count = (props) => {
     })
   }
 
-
   getCount();
 
   return (
     <div>
         <Button click={btnClick}/>
-        <Counter number={countNumb}/>
+        <Counter data-testid="counterTest" number={countNumb}/>
         </div>
   )
 }
+
+function jestTestSumFunc(a,b) {
+  return a+b;
+  // a function to test my test setup
+} 
+
+jestTestSumFunc(1,2);
 
